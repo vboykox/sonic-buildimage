@@ -8,6 +8,7 @@ KERNEL_SRC :=  /lib/modules/$(KVERSION)
 MODULE_SRC := $(shell pwd)/modules
 SCRIPT_SRC := $(shell pwd)/scripts
 CONFIGS_SRC := $(shell pwd)/configs
+PLUGINS_DIR := $(shell pwd)/plugins
 BUILD_DIR := $(shell pwd)/build
 WHEEL_BUILD_DIR := $(BUILD_DIR)/wheel
 
@@ -29,6 +30,8 @@ override_dh_auto_install:
 	cp -r $(CONFIGS_SRC)/network/interfaces.d/* debian/$(PACKAGE_NAME)/etc/network/interfaces.d/
 	dh_installdirs -p$(PACKAGE_NAME) usr/share/sonic/platform/
 	cp -r $(WHEEL_BUILD_DIR)/*  debian/$(PACKAGE_NAME)/usr/share/sonic/platform/
+	dh_installdirs -p$(PACKAGE_NAME) usr/share/sonic/platform/plugins/
+	cp  $(PLUGINS_DIR)/*  debian/$(PACKAGE_NAME)/usr/share/sonic/platform/plugins/
 
 override_dh_usrlocal:
 
