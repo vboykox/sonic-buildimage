@@ -1,1 +1,1 @@
-../sonic-platform-modules-bfn-montara/setup.py
+../sonic-platform-api-generic/setup.py
