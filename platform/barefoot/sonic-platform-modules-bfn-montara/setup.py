@@ -1,1 +1,0 @@
-../sonic-platform-api-generic/setup.py
