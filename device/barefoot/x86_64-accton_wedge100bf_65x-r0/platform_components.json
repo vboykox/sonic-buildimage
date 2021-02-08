@@ -1,0 +1,12 @@
+{
+    "chassis": {
+        "Lower MAV": {
+            "component": {
+            }
+    },
+        "Upper MAV": {
+            "component": {
+            }
+        }
+    }
+}
